@@ -225,7 +225,7 @@ All output images are saved to the working directory automatically.
 ## Visualizations
 
 ### 1 · Movies vs TV Shows
-![Movies vs TV Shows](1_movies_vs_tvshows.png)
+![Movies vs TV Shows](week1/1_movies_vs_tvshows.png)
 Simple count of content type — shows Netflix's movie-heavy catalog split.
 
 ---
