@@ -4,7 +4,7 @@
 A complete data cleaning and exploratory analysis pipeline on the Netflix titles dataset, producing 13 visualizations and a summary dashboard.
 
 ## Task of Week 1 
-[Task Description of Week 1](Week1task.png)
+![Task Description of Week 1](Week1task.png)  
 
 ---
 
