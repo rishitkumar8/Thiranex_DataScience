@@ -226,78 +226,79 @@ All output images are saved to the working directory automatically.
 
 ### 1 · Movies vs TV Shows
 ![Movies vs TV Shows](week1/1_movies_vs_tvshows.png)
+
 Simple count of content type — shows Netflix's movie-heavy catalog split.
 
 ---
 
 ### 2 · Top 10 Countries
-![Top 10 Countries](2_top_countries.png)
+![Top 10 Countries](week1/2_top_countries.png)
 Countries with the most titles, after splitting multi-country entries so each country counts individually.
 
 ---
 
 ### 3 · Rating Distribution
-![Rating Distribution](3_rating_distribution.png)
+![Rating Distribution](week1/3_rating_distribution.png)
 Horizontal bar chart of all content ratings, ordered by frequency. Highlights which audience segments Netflix targets most.
 
 ---
 
 ### 4 · Content Added Per Year
-![Content Per Year](4_content_added_per_year.png)
+![Content Per Year](week1/4_content_added_per_year.png)
 Line plot showing how Netflix's catalog grew year over year — peak year is clearly visible.
 
 ---
 
 ### 5 · Movie Duration Distribution
-![Movie Duration](5_movie_duration_distribution.png)
+![Movie Duration](week1/5_movie_duration_distribution.png)
 Histogram + KDE of movie runtimes in minutes, after IQR-based outlier capping.
 
 ---
 
 ### 6 · Top 10 Genres
-![Top Genres](6_top_genres.png)
+![Top Genres](week1/6_top_genres.png)
 Most frequent genre tags across the catalog. Multi-genre titles are counted once per genre.
 
 ---
 
 ### 7 · Monthly Content Additions
-![Monthly Additions](7_monthly_additions.png)
+![Monthly Additions](week1/7_monthly_additions.png)
 Which months Netflix adds the most content — useful for spotting seasonal release patterns.
 
 ---
 
 ### 8 · Missing Values Before vs After Cleaning
-![Missing Values](8_missing_values_comparison.png)
+![Missing Values](week1/8_missing_values_comparison.png)
 Side-by-side heatmap showing data quality improvement. Bright streaks on the left disappear on the right.
 
 ---
 
 ### 9 · Movie Duration Boxplot
-![Duration Boxplot](9_movie_duration_outliers.png)
+![Duration Boxplot](week1/9_movie_duration_outliers.png)
 Boxplot of movie durations after Winsorization — the distribution is now compact without losing any rows.
 
 ---
 
 ### 10 · Content Type by Country
-![Content by Country](10_content_type_by_country.png)
+![Content by Country](week1/10_content_type_by_country.png)
 Grouped bar chart showing the Movie / TV Show split within each of the top 10 producing countries.
 
 ---
 
 ### 11 · Year-over-Year Growth Rate
-![YoY Growth](11_yoy_growth.png)
+![YoY Growth](week1/11_yoy_growth.png)
 Percentage growth in new titles added each year. The dashed zero line makes growth vs decline easy to read.
 
 ---
 
 ### 12 · TV Show Season Distribution
-![TV Seasons](12_tvshow_seasons.png)
+![TV Seasons](week1/12_tvshow_seasons.png)
 How many seasons most Netflix TV shows have — reveals whether the platform favours short-run or long-run series.
 
 ---
 
 ### 13 · Combined Dashboard
-![Dashboard](13_netflix_dashboard.png)
+![Dashboard](week1/13_netflix_dashboard.png)
 All key charts in one 3×3 grid for a quick executive summary view.
 
 ---
