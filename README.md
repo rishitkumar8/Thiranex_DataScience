@@ -1,1 +1,0 @@
-# Thiranex_DataScience
