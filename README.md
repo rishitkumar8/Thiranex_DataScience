@@ -3,6 +3,9 @@
 
 A complete data cleaning and exploratory analysis pipeline on the Netflix titles dataset, producing 13 visualizations and a summary dashboard.
 
+## Task of Week 1 
+[Task Description of Week 1](Week1task.png)
+
 ---
 
 ## What this project does
@@ -28,6 +31,191 @@ Place `netflix_titles.csv` in the same folder as `week1.py`, then run:
 
 ```bash
 python week1.py
+```
+
+## Terminal Output
+```bash
+Dataset loaded  →  shape: (8807, 12)
+
+First 5 rows
+  show_id     type  ...                                          listed_in                                        description
+0      s1    Movie  ...                                      Documentaries                                                NaN
+1      s2  TV Show  ...    International TV Shows, TV Dramas, TV Mysteries  After crossing paths at a party, a Cape Town t...
+2      s3  TV Show  ...  Crime TV Shows, International TV Shows, TV Act...  To protect his family from a powerful drug lor...
+3      s4  TV Show  ...                             Docuseries, Reality TV  Feuds, flirtations and toilet talk go down amo...
+4      s5  TV Show  ...  International TV Shows, Romantic TV Shows, TV ...  In a city of coaching centers known to train I...
+
+[5 rows x 12 columns]
+
+Dataset info
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 8807 entries, 0 to 8806
+Data columns (total 12 columns):
+ #   Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   show_id       8791 non-null   object
+ 1   type          8796 non-null   object
+ 2   title         8797 non-null   object
+ 3   director      6172 non-null   object
+ 4   cast          7980 non-null   object
+ 5   country       7976 non-null   object
+ 6   date_added    8796 non-null   object
+ 7   release_year  8807 non-null   object
+ 8   rating        8803 non-null   object
+ 9   duration      8804 non-null   object
+ 10  listed_in     8806 non-null   object
+ 11  description   8805 non-null   object
+dtypes: object(12)
+memory usage: 825.8+ KB
+None
+
+Missing values before cleaning
+show_id           16
+type              11
+title             10
+director        2635
+cast             827
+country          831
+date_added        11
+release_year       0
+rating             4
+duration           3
+listed_in          1
+description        2
+dtype: int64
+
+Misplaced rating entries (e.g. '74 min'): 3
+                                     title  rating duration
+5541                       Louis C.K. 2017  74 min      NaN
+5794                 Louis C.K.: Hilarious  84 min      NaN
+5813  Louis C.K.: Live at the Comedy Store  66 min      NaN
+Dropped 32 rows missing show_id / title / type
+Duplicate rows: 0
+
+Cleaned dataset saved to cleaned_netflix_titles.csv
+
+── Content type distribution ──
+type
+Movie      6112
+TV Show    2652
+Name: count, dtype: int64
+
+── Top 10 countries ──
+country
+United States     3669
+India             1043
+United Kingdom     800
+Canada             442
+France             392
+Japan              315
+Spain              232
+South Korea        231
+Germany            224
+Mexico             169
+Name: count, dtype: int64
+
+── Top ratings ──
+rating
+TV-MA    3193
+TV-14    2150
+TV-PG     858
+R         796
+PG-13     487
+TV-Y7     331
+TV-Y      305
+PG        285
+TV-G      220
+NR         79
+Name: count, dtype: int64
+
+── Content added per year ──
+year_added
+2008       2
+2009       2
+2010       1
+2011      13
+2012       3
+2013      11
+2014      24
+2015      82
+2016     429
+2017    1188
+2018    1649
+2019    2016
+2020    1879
+2021    1465
+Name: count, dtype: int64
+
+── Year-over-year growth (%) ──
+year_added
+2008       NaN
+2009       0.0
+2010     -50.0
+2011    1200.0
+2012     -76.9
+2013     266.7
+2014     118.2
+2015     241.7
+2016     423.2
+2017     176.9
+2018      38.8
+2019      22.3
+2020      -6.8
+2021     -22.0
+Name: count, dtype: float64
+
+── Outlier analysis ──
+Q1: 87.0  |  Q3: 114.0  |  IQR: 27.0
+Bounds: [46.5, 154.5]
+Outliers found: 450
+Outliers capped to [46.5, 154.5] min
+count    6112.0
+mean       99.5
+std        25.0
+min        46.5
+25%        87.0
+50%        98.0
+75%       114.0
+max       154.5
+Name: duration_min, dtype: float64
+Dashboard saved → 13_netflix_dashboard.png
+
+── Key insights ──
+Total titles               : 8764
+Movies                     : 6112 (69.7%)
+TV Shows                   : 2652 (30.3%)
+Most common rating         : TV-MA
+Most prolific country      : United States
+Most common genre          : International Movies
+Peak content year          : 2019
+Avg movie duration (capped): 99.5 min
+Outliers detected & capped : 450
+
+── Data story ──
+
+Netflix's catalog of 8764 titles leans heavily toward Movies (69.7%),
+with TV Shows making up the remaining 30.3%.
+
+United States dominates content production by a significant margin, and the most
+common genre is 'International Movies', confirming Netflix's focus on broad-appeal
+international dramas and comedies.
+
+Most content is rated 'TV-MA', indicating the platform primarily targets
+mature audiences rather than families.
+
+Content additions peaked in 2019 — Netflix's most aggressive phase of
+global catalog expansion. Growth has been uneven year-to-year, with some years
+showing sharp jumps.
+
+The average movie runs 99.5 minutes after capping. 450 movies
+fell outside the normal duration range and were capped using IQR-based
+Winsorization — preserving the rows while reducing their influence on statistics.
+
+Monthly patterns show certain months receive significantly more titles, likely
+tied to Netflix's strategic release calendar around awards seasons and holiday
+viewing windows.
+
+Done!
 ```
 
 All output images are saved to the working directory automatically.
