@@ -1,0 +1,95 @@
+=================================================================
+       NETFLIX EDA — AUTOMATED INSIGHTS REPORT
+=================================================================
+
+--- SECTION 1: DATASET OVERVIEW ---
+  Total titles analysed  : 8,775
+  Movies                 : 6,112 (69.7%)
+  TV Shows               : 2,663 (30.3%)
+  Unique countries       : 86
+  Unique primary genres  : 36
+  Release years covered  : 1925 - 2021
+  Peak addition year     : 2019
+
+--- SECTION 2: STATISTICAL SUMMARY ---
+  Movie duration  -> Mean: 99.5 min, Median: 98 min, Std: 28.3
+  Movie duration  -> Skewness: 0.20 (right-skewed: long movies pull mean above median)
+  TV Show seasons -> Mean: 1.8, Median: 1
+  Genres per title -> Mean: 2.19, Max: 3
+
+--- SECTION 3: GENRE TRENDS ---
+  Fastest growing genre (2015-2021) : International TV Shows (+7.4 pp)
+  Fastest shrinking genre           : Documentaries (-15.7 pp)
+  International Movies               : 16.1% -> 21.9%
+  Dramas                             : 19.4% -> 22.0%
+  Comedies                           : 19.4% -> 16.1%
+  International TV Shows             : 4.8% -> 12.2%
+  Documentaries                      : 21.0% -> 5.3%
+
+--- SECTION 4: CONTENT STRATEGY ---
+  Kids   [DOWN]: 23.5% -> 12.9% (change: -10.6 pp)
+  Teen   [UP]: 32.4% -> 41.8% (change: +9.4 pp)
+  Adult  [UP]: 44.1% -> 45.3% (change: +1.2 pp)
+  Key finding: Netflix has been steadily reducing Kids content
+  and increasing Teen content — a clear shift toward broader audiences.
+
+--- SECTION 5: CATALOG GROWTH ---
+  Catalog size in 2016: ~545 titles
+  Catalog size in 2021: ~8,676 titles
+  Peak addition year  : 2019 (1999 titles added)
+  Q4 (Oct-Dec) sees 2215 titles — Netflix prepares for holiday viewing windows.
+
+--- SECTION 6: GEOGRAPHIC ANALYSIS ---
+  United States       : 3111 titles (2015-2021 growth +1000%)
+  India               : 1004 titles (2015-2021 growth +9700%)
+  United Kingdom      :  607 titles (2015-2021 growth +1800%)
+  Canada              :  256 titles (2015-2021 growth +1200%)
+  Japan               :  253 titles (2015-2021 growth +4200%)
+  India shows the highest growth rate — Netflix's biggest international push.
+
+--- SECTION 7: COUNTRY x GENRE ---
+  United States       : dominant genre is 'Documentaries' (19.6%)
+  India               : dominant genre is 'Dramas' (44.3%)
+  United Kingdom      : dominant genre is 'Documentaries' (31.0%)
+  Canada              : dominant genre is 'Children & Family Movies' (18.1%)
+  Japan               : dominant genre is 'Action & Adventure' (50.5%)
+
+--- SECTION 8: DURATION ANALYSIS ---
+  Kruskal-Wallis test across genres: H=1986.66, p=0.00e+00
+  -> Genre has a statistically significant effect on movie duration.
+  Shortest avg genre : Stand-Up Comedy (65 min)
+  Longest avg genre  : Classic Movies (112 min)
+  Duration trend     : -0.74 min/year — movies are trending shorter.
+
+--- SECTION 9: OUTLIER ANALYSIS ---
+  IQR method: Q1=87 min, Q3=114 min, IQR=27 min
+  Normal range: [46, 154] minutes
+  Outliers detected: 450 titles (7.4% of all movies)
+  These represent genuinely long films and short-form content,
+  not data errors — they should be retained but noted.
+
+--- SECTION 10: ASSOCIATION ANALYSIS (Cramer's V) ---
+  Audience x Rating                       : V=0.999 (strong)
+  Content Type x Rating                   : V=0.342 (moderate)
+  Content Type x Country Group            : V=0.239 (weak)
+  Country Group x Rating                  : V=0.208 (weak)
+  Content Type x Audience                 : V=0.160 (weak)
+
+--- SECTION 11: TOP DIRECTORS ---
+  Rajiv Chilaka                 : 19 titles
+  Raúl Campos, Jan Suter        : 18 titles
+  Suhas Kadav                   : 16 titles
+  Marcus Raboy                  : 16 titles
+  Jay Karas                     : 14 titles
+
+--- SECTION 12: RECOMMENDATIONS ---
+  1. Netflix should invest further in International TV Shows — fastest growing genre.
+  2. Kids content is declining sharply — risk of losing family subscriber segment.
+  3. India is the fastest growing content market — worth deeper analysis.
+  4. July is peak addition month — aligns with summer viewing surge.
+  5. Stand-Up Comedy is 88% Adult — strong niche with high engagement potential.
+
+=================================================================
+  Report generated from netflix_titles.csv using Python EDA pipeline.
+  Visualizations saved to week3/  |  Script: week3.py
+=================================================================
